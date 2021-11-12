@@ -47,7 +47,7 @@ namespace Consumer
                 {
                     try
                     {
-                        var consumerResult = consumer.Consume(TimeSpan.FromSeconds(1));
+                        var consumerResult = consumer.Consume(stoppingToken);
 
                         if (consumerResult == null || consumerResult.IsPartitionEOF)
                         {
@@ -57,7 +57,6 @@ namespace Consumer
                         /*
                          * Consume messages here, retry if failure, and commit if success
                         */
-
                         var transaction = JsonSerializer.Deserialize<Transaction>(consumerResult.Message.Value);
 
                         Console.WriteLine($"Consumed transaction with Id {transaction.Id}, and value {transaction.Value} at: {consumerResult.TopicPartitionOffset}.");

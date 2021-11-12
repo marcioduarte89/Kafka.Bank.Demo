@@ -33,7 +33,7 @@ namespace Producer.API
                 var bootstrapperServer = Configuration.GetValue<string>("BootstrapperServer");
                 var producerConfig = new ProducerConfig
                 {
-                    BootstrapServers = "localhost:19092",
+                    BootstrapServers = bootstrapperServer,
                     EnableIdempotence = true,
                     Acks = Acks.All,
                     LingerMs = 50
