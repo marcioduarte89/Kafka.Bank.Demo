@@ -1,5 +1,5 @@
 ﻿using Confluent.Kafka;
-using Contracts;
+using Messages;
 using Microsoft.Extensions.Configuration;
 using Producer.API.Services.Interfaces;
 using System;

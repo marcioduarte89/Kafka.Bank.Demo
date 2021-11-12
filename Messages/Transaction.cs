@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Contracts
+namespace Messages
 {
     public class Transaction
     {

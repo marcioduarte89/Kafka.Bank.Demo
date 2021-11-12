@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Producer.API.DTOs;
+﻿using Messages;
+using Microsoft.AspNetCore.Mvc;
 using Producer.API.Services.Interfaces;
 using System;
 using System.Threading;
@@ -19,10 +19,10 @@ namespace Producer.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody]Transaction transaction, CancellationToken cancellationToken)
+        public async Task<IActionResult> Create([FromBody] DTOs.Transaction transaction, CancellationToken cancellationToken)
         {
             var transactionId = Guid.NewGuid();
-            await _transactionService.CreateTransaction(new Contracts.Transaction()
+            await _transactionService.CreateTransaction(new Transaction()
             {
                 Id = transactionId,
                 UserId = transaction.UserId,

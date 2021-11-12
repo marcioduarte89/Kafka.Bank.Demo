@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Producer.API", "Producer.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer", "Consumer\Consumer.csproj", "{AC6B3727-2B86-4F43-AFEA-57E25A5217F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{AFAE55F8-AFDB-48EF-8A79-00EA9A0DF941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Messages", "Messages\Messages.csproj", "{AFAE55F8-AFDB-48EF-8A79-00EA9A0DF941}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
