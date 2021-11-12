@@ -30,7 +30,7 @@ namespace Producer.API.Services
                 Value = JsonSerializer.Serialize(transaction) 
             };
 
-            var deliveryResult = await _producer.ProduceAsync(topicName, message);
+            var deliveryResult = await _producer.ProduceAsync(topicName, message, cancellationToken);
             Console.WriteLine($"Message written to partition { deliveryResult.Partition.Value } with current offset {deliveryResult.Offset.Value}");
         }
     }
